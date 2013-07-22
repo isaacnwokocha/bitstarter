@@ -4,12 +4,9 @@ app.use(express.logger());
 
 
 var buffer = Buffer(128);
-buffer.write("fs.readFileSync("./index.html")", "utf-8");
-
-console.log("Buffer is: " + buf.toString("utf-8");
  
 app.get('/', function(request, response) {
-  response.send(buf.toString("utf-8"));
+  response.send(fs.readFileSunc("./index.html").toString());
 });
 
 var port = process.env.PORT || 5000;
