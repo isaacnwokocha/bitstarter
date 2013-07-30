@@ -19,8 +19,8 @@ var cheerioHtmlFile = function(htmlfile) {
     return cheerio.load(fs.readFileSync(htmlfile));
 };
 
-var loadChecks = function(checkfile) {
-    retun JSON.parse(fs.readFileSync(checksfile));
+var loadChecks = function(checksfile) {
+    return JSON.parse(fs.readFileSync(checksfile));
 };
 
 var checkHtmlFile = function(htmlfile, checksfile) {
@@ -40,7 +40,7 @@ var clone = function(fn) {
 
 if(require.main == module) {
     program
-	.option('-c. --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHEKCFILE_DEFAULT)
+	.option('-c. --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
 	.option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
 	.parse(process.argv);
     var checkJson = checkHtmlFile(program.file, program.checks);
