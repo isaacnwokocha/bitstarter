@@ -6,7 +6,7 @@ var cheerio = require('cheerio');
 var rest = require('restler');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json"
-var UTL_DEFAULT = ;
+var URL_DEFAULT = "http://protected-scrubland-8291.herokuapp.com/index.html";
 
 var assertFileExists = function(infile) {
     var instr = infile.toString();
