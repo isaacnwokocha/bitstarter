@@ -62,7 +62,7 @@ if(require.main == module) {
 	.parse(process.argv);
 
     if (program.url){
-	checkYrl(program.url, program.checks);
+	checkUrl(program.url, program.checks);
     } else {
 	checkHtmlFile (program.file, program.checks);
 
